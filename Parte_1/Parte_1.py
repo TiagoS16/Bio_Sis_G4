@@ -37,5 +37,30 @@ from mewpy.problems import GKOProblem
 problem = GKOProblem(model, fevaluation=[evaluator_1, evaluator_2], envcond=envcond, candidate_max_size=1)
 
 from mewpy.optimization import EA
-mutante = EA(problem, max_generations=100, visualizer=True)
+mutante = EA(problem, max_generations=20, visualizer=True)
 mutante_run= mutante.run()
+print(mutante_run)
+
+from mewpy.utils.constants import ModelConstants
+ModelConstants.RESET_SOLVER = True
+
+#b)
+'''
+PRODUCT_ID = 'EX_for_e'
+BIOMASS_ID = 'BIOMASS_Ec_iML1515_core_75p37M'
+
+from mewpy.optimization.evaluation import BPCY, TargetFlux
+evaluator_1 = BPCY(BIOMASS_ID, PRODUCT_ID, method='pFBA')
+evaluator_2 = TargetFlux(PRODUCT_ID)
+
+from mewpy.problems import GKOProblem
+problem = GKOProblem(model, fevaluation=[evaluator_1, evaluator_2], envcond=envcond, candidate_max_size=5)
+
+from mewpy.optimization import EA
+mutante2 = EA(problem, max_generations=20, visualizer=True)
+mutante_run2= mutante2.run()
+print(mutante_run2)
+
+from mewpy.utils.constants import ModelConstants
+ModelConstants.RESET_SOLVER = True
+'''
