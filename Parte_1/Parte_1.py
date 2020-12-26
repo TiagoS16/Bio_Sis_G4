@@ -20,12 +20,14 @@ for i in model_bounds:
 
 #1)
 #print(result.fluxes['EX_for_e']) #nao produz formato em condicoes ambientais
+#print('----------')
 
 #2)
 #print(simul.FVA(reactions=['EX_for_e'], format='df')) #minimo= 0.0; maximo= 28.29
 
 #3)
 #a)
+
 PRODUCT_ID = 'EX_for_e'
 BIOMASS_ID = 'BIOMASS_Ec_iML1515_core_75p37M'
 
@@ -37,7 +39,7 @@ from mewpy.problems import GKOProblem
 problem = GKOProblem(model, fevaluation=[evaluator_1, evaluator_2], envcond=envcond, candidate_max_size=1)
 
 from mewpy.optimization import EA
-mutante = EA(problem, max_generations=20, visualizer=True)
+mutante = EA(problem, max_generations=50, visualizer=True)
 mutante_run= mutante.run()
 print(mutante_run)
 
