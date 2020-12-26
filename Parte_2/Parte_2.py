@@ -19,7 +19,18 @@ print(result) #specific growth rate
 print('----------------')
 
 #c)
+yo= simul.essential_reactions
+yoo= simul.essential_genes
 print('Reações essenciais:', '\n', simul.essential_reactions)
 print('------------')
 print('Genes essenciais:', '\n', simul.essential_genes)
 
+'''
+for i in yo:
+    print(i)
+
+print('----------')
+
+for o in yoo:
+    print(o)
+'''
