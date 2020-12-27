@@ -37,13 +37,15 @@ from mewpy.optimization import EA
 mutante = EA(problem, max_generations=50, visualizer=True)
 mutante_run= mutante.run()
 print(mutante_run)
-print('----------')
+gene_list = open('1_GKO_list.txt', 'w')
+for i in mutante_run:
+    gene_list.write(str(i) + '\n')
 
 from mewpy.utils.constants import ModelConstants
 ModelConstants.RESET_SOLVER = True
-'''
 
 #b)
+
 PRODUCT_ID = 'EX_for_e'
 BIOMASS_ID = 'BIOMASS_Ec_iML1515_core_75p37M'
 
@@ -62,3 +64,4 @@ print('----------')
 
 from mewpy.utils.constants import ModelConstants
 ModelConstants.RESET_SOLVER = True
+'''
