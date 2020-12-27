@@ -23,4 +23,3 @@ for i in mutante_run:
 
 from mewpy.utils.constants import ModelConstants
 ModelConstants.RESET_SOLVER = True
-
