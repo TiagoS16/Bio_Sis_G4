@@ -26,7 +26,7 @@ def restore_bounds():
 print('complete model: ', model.optimize())
 for i in genes:
     restore_bounds()
-    model.genes.get_by_id(i).knock_out()
+    model.genes.get_by_id(i).knock_out() #model.reaction
     print(i, 'knocked out: ', model.optimize())
 
 
