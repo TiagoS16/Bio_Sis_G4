@@ -26,11 +26,17 @@ print('------------')
 print('Genes essenciais:', '\n', simul.essential_genes)
 
 '''
+yo_1= ''
 for i in yo:
-    print(i)
+    j= i + ', '
+    yo_1 += j
 
-print('----------')
-
+yoo_1= ''
 for o in yoo:
-    print(o)
+    k= o + ', '
+    yoo_1 += k
+
+print(yo_1)
+print('----------')
+print(yoo_1)
 '''
