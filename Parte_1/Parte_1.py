@@ -14,7 +14,9 @@ result= simul.simulate(method='FBA')
 #formate: R_EX_for_e
 
 #1)
+print('Produção formato em wild-type:')
 print(result.fluxes['EX_for_e']) #nao produz formato em condicoes ambientais
+
 print('----------')
 
 #2)

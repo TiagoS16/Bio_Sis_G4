@@ -25,12 +25,12 @@ print('Reações essenciais:', '\n', simul.essential_reactions)
 print('------------')
 print('Genes essenciais:', '\n', simul.essential_genes)
 
-'''
+
 yo_1= ''
 for i in yo:
     j= i + ', '
     yo_1 += j
-
+print('------------------')
 yoo_1= ''
 for o in yoo:
     k= o + ', '
@@ -39,4 +39,3 @@ for o in yoo:
 print(yo_1)
 print('----------')
 print(yoo_1)
-'''
